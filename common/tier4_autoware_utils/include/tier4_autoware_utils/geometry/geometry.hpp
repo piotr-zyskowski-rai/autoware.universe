@@ -115,7 +115,7 @@ inline geometry_msgs::msg::Pose getPose(const autoware_auto_planning_msgs::msg::
 }
 
 template <class T>
-void setPose(const geometry_msgs::msg::Pose & pose, [[maybe_unused]] T & p)
+void setPose([[maybe_unused]] const geometry_msgs::msg::Pose & pose, [[maybe_unused]] T & p)
 {
   static_assert(sizeof(T) == 0, "Only specializations of getPose can be used.");
   throw std::logic_error("Only specializations of getPose can be used.");

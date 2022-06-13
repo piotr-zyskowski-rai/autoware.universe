@@ -65,7 +65,7 @@ void setHeatmapToBuffer(
   try {
     data_buffer->at(indexY * mapWidth + indexX) += score;
   } catch (const std::out_of_range & e) {
-    RCLCPP_ERROR(rclcpp::get_logger("setHeatmapToBuffer"), e.what());
+    RCLCPP_ERROR(rclcpp::get_logger("setHeatmapToBuffer"), "%s", e.what());
   }
 }
 

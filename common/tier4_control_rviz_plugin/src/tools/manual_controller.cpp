@@ -268,7 +268,7 @@ void ManualController::onClickEnableButton()
       return;
     }
     client_engage_->async_send_request(
-      req, [this]([[maybe_unused]] rclcpp::Client<EngageSrv>::SharedFuture result) {});
+      req, []([[maybe_unused]] rclcpp::Client<EngageSrv>::SharedFuture result) {});
   }
 }
 
